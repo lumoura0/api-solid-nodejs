@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/lumoura0/api-solid-nodejs#readme",
   "devDependencies": {
+    "@rocketseat/eslint-config": "2.2.2",
     "@types/node": "22.13.0",
+    "eslint": "8.57.1",
     "tsup": "8.3.6",
     "tsx": "4.19.2",
     "typescript": "5.7.3"
