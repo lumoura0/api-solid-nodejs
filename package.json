@@ -4,7 +4,7 @@
   "description": "GymPass style app.",
   "main": "index.js",
   "scripts": {
-    "start:dev":"tsx watch src/server.ts",
+    "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
     "build": "tsup src --out-dir build"
   },
@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/lumoura0/api-solid-nodejs#readme",
   "devDependencies": {
-    "@types/node": "^22.13.0",
-    "tsup": "^8.3.6",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "@types/node": "22.13.0",
+    "tsup": "8.3.6",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
   },
   "dependencies": {
-    "fastify": "^5.2.1"
+    "fastify": "5.2.1"
   }
 }
