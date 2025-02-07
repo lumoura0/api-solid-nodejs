@@ -8,5 +8,6 @@ prisma.user.create({
     data: {
         name: 'shiro',
         email: 'shiro@example.com',
+        
     },
 })
