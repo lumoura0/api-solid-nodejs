@@ -1,14 +1,20 @@
-import { expect, describe, it } from 'vitest'
+import { expect, describe, it, beforeEach } from 'vitest'
 import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-users-repository';
 import { AuthenticateUseCase } from './authenticate';
 import { hash } from 'bcryptjs';
 import { InvalidCredentialsError } from './errors/invalid-credentials-error';
 
+
+let usersRepository: InMemoryUsersRepository
+let sut: AuthenticateUseCase
 describe('Authenticate Use Case', () => {
+    beforeEach(() => {
+        usersRepository = new InMemoryUsersRepository()
+        sut = new AuthenticateUseCase(usersRepository)
+    })
+
     it('should be able to authenticate', async () => {
-        const usersRepository = new InMemoryUsersRepository()
         // System under test (SUT) refers to a system that is being tested for correct operation.
-        const sut = new AuthenticateUseCase(usersRepository)
 
         await usersRepository.create({
             name: 'John Doe',
