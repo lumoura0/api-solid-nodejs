@@ -13,8 +13,6 @@ describe('Register Use Case', () => {
         sut = new RegisterUseCase(usersRepository)
     })
     it('should be able to register', async () => {
-
-
         const { user } = await sut.execute({
             name: 'John Doe',
             email: 'johndoe@example.com',
@@ -26,8 +24,6 @@ describe('Register Use Case', () => {
 
 
     it('should hash user password upon registration', async () => {
-
-
         const { user } = await sut.execute({
             name: 'John Doe',
             email: 'johndoe@example.com',
@@ -41,8 +37,6 @@ describe('Register Use Case', () => {
     })
 
     it.skip('should not be able to register with same email twice', async () => {
-
-
         const email = 'johndoe@example.com'
 
         await sut.execute({
