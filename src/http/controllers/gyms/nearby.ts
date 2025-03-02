@@ -1,5 +1,4 @@
 import { makeFetchNearbyGymsUseCase } from '@/use-cases/factories/make-fetch-nearby-gyms-use-case'
-import { makeSearchGymsUseCase } from '@/use-cases/factories/make-search-gyms-use-case'
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 
